@@ -4,9 +4,9 @@ version: "0.1"
 authors: "Johan Mazel"
 maintainer: "johan.mazel@gmail.com"
 license: "GPL3"
-homepage: "https://github.com/johanmazel/ocaml-nac_taxonomy"
-dev-repo: "https://github.com/johanmazel/ocaml-nac_taxonomy.git"
-bug-reports: "https://github.com/johanmazel/ocaml-nac_taxonomy/issues"
+homepage: "https://github.com/johanmazel/ocaml-nac_lib"
+dev-repo: "https://github.com/johanmazel/ocaml-nac_lib.git"
+bug-reports: "https://github.com/johanmazel/ocaml-nac_lib/issues"
 build: [
   ["oasis" "setup"]
   ["ocaml" "setup.ml" "-configure"]
@@ -15,4 +15,4 @@ build: [
 install: [
   ["ocaml" "setup.ml" "-install"]
 ]
-remove: [["ocamlfind" "remove" "nac_taxonomy"]]
+remove: [["ocamlfind" "remove" "nac_lib"]]
