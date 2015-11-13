@@ -16,3 +16,11 @@ install: [
   ["ocaml" "setup.ml" "-install"]
 ]
 remove: [["ocamlfind" "remove" "nac_lib"]]
+depends: [
+  "batteries"
+
+  "jl"
+  "netralys_metrics"
+  "netralys_ipaddr_container"
+  "netralys_attribute_value"
+]
