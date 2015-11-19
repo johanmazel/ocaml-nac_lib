@@ -28,8 +28,8 @@ type t =
   {
     basename_wo_extension : string;
 
-    date : Core.Date.t;
-    time : Core.Time.t;
+    (* date : Core.Date.t; *)
+    (* time : Core.Time.t; *)
 
     algorithm_option :  Admd.Algorithm.t option;
     analysis_option :  Admd.Analysis.t option;
@@ -41,8 +41,8 @@ type t =
 let new_t
     basename_wo_extension
 
-    date
-    time
+    (* date *)
+    (* time *)
 
     algorithm_option
     analysis_option
@@ -53,8 +53,8 @@ let new_t
   {
     basename_wo_extension;
 
-    date;
-    time;
+    (* date; *)
+    (* time; *)
 
     algorithm_option;
     analysis_option;
@@ -66,8 +66,8 @@ let new_t
 let of_data
     filepath
 
-    date
-    time
+    (* date *)
+    (* time *)
 
     algorithm_option
     analysis_option
@@ -90,8 +90,8 @@ let of_data
   new_t
     basename_wo_extension
 
-    date
-    time
+    (* date *)
+    (* time *)
 
     algorithm_option
     analysis_option
@@ -225,8 +225,8 @@ let export_xml
           Mawilab_admd_classic.File.new_t
             filename
 
-            t.date
-            t.time
+            (* t.date *)
+            (* t.time *)
 
             t.algorithm_option
             t.analysis_option
@@ -284,8 +284,8 @@ let export_xml
           Mawilab_admd_xml.File.new_t
             filename
 
-            t.date
-            t.time
+            (* t.date *)
+            (* t.time *)
 
             t.algorithm_option
             (Some analysis)
@@ -313,7 +313,7 @@ let export_binary
 
   let day_anomaly_container =
     Day_anomaly_container.new_t
-      t.time
+      (* t.time *)
 
       (Admd_mawilab_type_base_value_binary_description.Anomaly_container.new_t
          anomaly_l

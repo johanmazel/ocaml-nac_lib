@@ -91,8 +91,8 @@ let to_xml_anomaly_simple_description
     Mawilab_admd_classic.Anomaly.new_t
       indice
 
-      t.date
-      t.time
+      (* t.date *)
+      (* t.time *)
 
       t.anomaly_type
       value
@@ -132,8 +132,8 @@ let to_xml_anomaly_full_description
     Mawilab_admd_xml.Anomaly.new_t
       indice
 
-      t.date
-      t.time
+      (* t.date *)
+      (* t.time *)
 
       t.anomaly_type
       value
@@ -173,8 +173,8 @@ let to_binary_anomaly
     Admd_mawilab_type_base_value_binary_description.Anomaly.new_t
       indice
 
-      t.date
-      t.time
+      (* t.date *)
+      (* t.time *)
 
       t.anomaly_type
       value

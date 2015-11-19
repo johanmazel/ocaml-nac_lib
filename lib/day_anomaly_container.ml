@@ -26,19 +26,19 @@ let debug fmt =
 
 type t =
   {
-    time : Core.Time.t;
+    (* time : Core.Time.t; *)
     
     anomaly_container : Admd_mawilab_type_base_value_binary_description.Anomaly_container.t;
   }
   with compare, bin_io
 
 let new_t
-    time
+    (* time *)
 
     anomaly_container
   =
   {
-    time;
+    (* time; *)
 
     anomaly_container;
   }
