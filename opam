@@ -17,6 +17,8 @@ install: [
 ]
 remove: [["ocamlfind" "remove" "nac_lib"]]
 depends: [
+  "ocamlfind"
+  "oasis"
   "batteries"
 
   "ocaml-jl"
