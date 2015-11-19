@@ -21,4 +21,5 @@ depends: [
 
   "ocaml-jl"
   "ocaml-netralys"
+  "ocaml-nac_taxonomy"
 ]
