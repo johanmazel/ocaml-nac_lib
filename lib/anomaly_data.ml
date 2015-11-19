@@ -5,8 +5,8 @@ open Admd_instantiations_for_classification
 
 type t =
   {
-    date : Core.Date.t;
-    time : Core.Time.t;
+    (* date : Core.Date.t; *)
+    (* time : Core.Time.t; *)
 
     anomaly_type : Mawilab_anomaly_type.t;
     base_value : Admd.Instantiation.Base_value.t;
@@ -27,8 +27,8 @@ type t =
   }
 
 let new_t
-    date
-    time
+    (* date *)
+    (* time *)
 
     anomaly_type
     base_value
@@ -49,8 +49,8 @@ let new_t
     end_time
   =
   {
-    date;
-    time;
+    (* date; *)
+    (* time; *)
 
     anomaly_type;
     base_value;
