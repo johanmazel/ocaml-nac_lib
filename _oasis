@@ -15,10 +15,18 @@ Library nac_lib
                  Anomaly_metric,
                  Anomaly_port,
                  Anomaly_raw_data,
-                 Binary_classification_description,
+
                  Filter_criteria_extractor,
+
+                 Binary_classification_description,
+                 Xml_classification_description,
+
                  Mawilab_anomaly_type,
-                 Xml_classification_description
+
+                 Admd_instantiations_for_classification,
+                 Anomaly_data,
+                 Day_anomaly_container,
+                 Anomaly_data_container
 
   BuildDepends:  
                  threads,
@@ -29,6 +37,8 @@ Library nac_lib
                  netralys_metrics,
                  netralys_ipaddr_container,
                  netralys_attribute_value,
+
+                 nac_taxonomy,
 
                  comparelib,
                  comparelib.syntax,
