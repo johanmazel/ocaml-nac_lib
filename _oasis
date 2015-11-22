@@ -26,9 +26,7 @@ Library nac_lib
                  Admd_instantiations_for_classification,
                  Anomaly_data,
                  Day_anomaly_container,
-                 Anomaly_data_container,
-
-                 Extract_time_from_filename
+                 Anomaly_data_container
 
   BuildDepends:  
                  threads,
