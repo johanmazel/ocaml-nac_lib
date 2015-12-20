@@ -28,7 +28,8 @@ type t =
   {
     (* time : Core.Time.t; *)
     
-    anomaly_container : Admd_mawilab_type_base_value_binary_description.Anomaly_container.t;
+    (* anomaly_container : Admd_mawilab_type_base_value_binary_description.Anomaly_container.t; *)
+    anomaly_container : Admd_mawilab_type_classification_value_binary_description.Anomaly_container.t;
   }
   with compare, bin_io
 
@@ -97,19 +98,3 @@ let of_file filename =
 
     t
   )
-
-(* let filter *)
-(*     f *)
-(*     t *)
-(*   = *)
-(*   let anomaly_container = *)
-(*     (\* Admd_mawilab_type_base_value_binary_description.Anomaly_container.filter *\) *)
-(*     Mawilab_admd_simple_value_classification_binary_description.Anomaly_container.filter *)
-(*       f *)
-(*       t.anomaly_container *)
-(*   in *)
-
-(*   new_t *)
-(*     t.time *)
-
-(*     anomaly_container *)

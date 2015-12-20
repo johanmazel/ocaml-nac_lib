@@ -9,3 +9,11 @@ module Admd_mawilab_type_base_value_binary_description =
   Admd.Data.Make(Mawilab_anomaly_type)(Admd.Instantiation.Base_value)(Binary_classification_description)
 
 
+
+
+
+
+module Admd_mawilab_type_classification_value_binary_description =
+  Admd.Data.Make(Mawilab_anomaly_type)(Classification_value)(Binary_classification_description)
+
+

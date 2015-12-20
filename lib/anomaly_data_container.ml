@@ -315,7 +315,7 @@ let export_binary
     Day_anomaly_container.new_t
       (* t.time *)
 
-      (Admd_mawilab_type_base_value_binary_description.Anomaly_container.new_t
+      (Admd_mawilab_type_classification_value_binary_description.Anomaly_container.new_t
          anomaly_l
       )
   in

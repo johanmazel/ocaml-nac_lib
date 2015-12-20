@@ -149,16 +149,18 @@ let to_xml_anomaly_full_description
     
 
 let to_binary_anomaly
-  indice
-  t
+    indice
+    t
   =
   let value =
-    t.base_value
-    ^ ","
-    ^ (Anomaly_signature.to_short_name t.anomaly_signature)
+    (* t.base_value *)
+    (* ^ "," *)
+    (* ^ (Anomaly_signature.to_short_name t.anomaly_signature) *)
+    Classification_value.new_t
+      t.base_value
+      t.anomaly_signature
   in
 
-  
   let mawilab_description_for_binary_classification =
     Binary_classification_description.new_t
       t.anomaly_metric
@@ -170,7 +172,7 @@ let to_binary_anomaly
   in
 
   let anomaly =
-    Admd_mawilab_type_base_value_binary_description.Anomaly.new_t
+    Admd_mawilab_type_classification_value_binary_description.Anomaly.new_t
       indice
 
       (* t.date *)
