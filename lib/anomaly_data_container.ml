@@ -10,7 +10,7 @@ module L = BatList
 
 open Admd_instantiations_for_classification
 
-open Day_anomaly_container_instantiation
+open Day_anomaly_container_instantiation_for_classification
     
 let debug_enabled = ref false
 
