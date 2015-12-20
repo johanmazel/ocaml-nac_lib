@@ -22,10 +22,12 @@ Library nac_lib
                  Xml_classification_description,
 
                  Mawilab_anomaly_type,
+                 Classification_value,
 
                  Admd_instantiations_for_classification,
                  Anomaly_data,
                  Day_anomaly_container,
+                 Day_anomaly_container_instantiation_for_classification,
                  Anomaly_data_container
 
   BuildDepends:  
