@@ -58,8 +58,6 @@ module Make (Container : Container) = struct
       prefix
     =
     (
-      print_endline (sprintf "[Day_anomaly_container]: to_file_prefix: prefix %s" prefix);
-      
       let filename = generate_filename prefix in
 
       let filename =
