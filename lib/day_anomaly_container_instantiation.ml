@@ -1,0 +1,8 @@
+
+open Admd_instantiations_for_classification
+
+
+module Day_anomaly_container_classification =
+  Day_anomaly_container.Make(Admd_mawilab_type_classification_value_binary_description.Anomaly_container)
+
+
