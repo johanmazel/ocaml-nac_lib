@@ -332,5 +332,5 @@ let export_binary
 
   Day_anomaly_container_classification.to_file_prefix
     day_anomaly_container
-    t.basename_wo_extension
+    (t.basename_wo_extension ^ "_anomaly_data")
   ;
