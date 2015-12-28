@@ -1,0 +1,8 @@
+
+open Admd_instantiations_for_classification
+
+
+module Binary_container_classification =
+  Binary_container.Make(Admd_mawilab_type_classification_value_binary_description.Anomaly_container)
+
+
