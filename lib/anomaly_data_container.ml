@@ -10,7 +10,7 @@ module L = BatList
 
 open Admd_instantiations_for_classification
 
-open Day_anomaly_container_instantiation_for_classification
+open Binary_container_instantiation_for_classification
     
 let debug_enabled = ref false
 
@@ -314,7 +314,7 @@ let export_binary
   in
 
   let day_anomaly_container =
-    Day_anomaly_container_classification.new_t
+    Binary_container_classification.new_t
       (* t.time *)
 
       (Admd_mawilab_type_classification_value_binary_description.Anomaly_container.new_t
@@ -330,7 +330,7 @@ let export_binary
   (*     t.basename *)
   (* in *)
 
-  Day_anomaly_container_classification.to_file_prefix
+  Binary_container_classification.to_file_prefix
     day_anomaly_container
     (t.basename_wo_extension ^ "_anomaly_data")
   ;
