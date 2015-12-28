@@ -26,9 +26,10 @@ Library nac_lib
 
                  Admd_instantiations_for_classification,
                  Anomaly_data,
-                 Day_anomaly_container,
-                 Day_anomaly_container_instantiation_for_classification,
-                 Anomaly_data_container
+                 Anomaly_data_container,
+
+                 Binary_container,
+                 Binary_container_instantiation_for_classification
 
   BuildDepends:  
                  threads,
