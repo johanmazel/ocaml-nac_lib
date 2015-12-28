@@ -314,7 +314,7 @@ let export_binary
   in
 
   let day_anomaly_container =
-    Binary_container_classification.new_t
+    Binary_container_anomaly_classification.new_t
       (* t.time *)
 
       (Admd_mawilab_type_classification_value_binary_description.Anomaly_container.new_t
@@ -330,7 +330,7 @@ let export_binary
   (*     t.basename *)
   (* in *)
 
-  Binary_container_classification.to_file_prefix
+  Binary_container_anomaly_classification.to_file_prefix
     day_anomaly_container
     (t.basename_wo_extension ^ "_anomaly_data")
   ;
