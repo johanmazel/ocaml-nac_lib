@@ -8,7 +8,7 @@ module L = BatList
 
 open Admd.Instantiation
 
-let debug_enabled = ref true
+let debug_enabled = ref false
 
 let set_debug bool = debug_enabled := bool
 
@@ -22,26 +22,10 @@ let debug fmt =
     )
     fmt
 
-let extract
-    anomaly_container
+let of_filter_criteria_lll
+    filter_criteria_list_list_list
   =  
   debug "process: call";
-
-  let filter_criteria_list_list_list =
-    L.map
-      (fun anomaly ->
-         L.map
-           (fun slice ->
-              L.map
-                (fun filter ->
-                   filter. Admd.Filter.filter_criteria_list
-                )
-                slice. Admd.Slice.filter_list
-           )
-           anomaly.Base.Anomaly.slice_list
-      )
-      anomaly_container.Base.Anomaly_container.anomaly_list
-  in
 
   let filter_criteria_list =
     L.flatten
@@ -67,3 +51,25 @@ let extract
   debug "process: end";
 
   filter_criteria_list_sorted_unique
+
+let of_anomaly_container
+    anomaly_container
+  =
+  let filter_criteria_list_list_list =
+    L.map
+      (fun anomaly ->
+         L.map
+           (fun slice ->
+              L.map
+                (fun filter ->
+                   filter. Admd.Filter.filter_criteria_list
+                )
+                slice. Admd.Slice.filter_list
+           )
+           anomaly.Base.Anomaly.slice_list
+      )
+      anomaly_container.Base.Anomaly_container.anomaly_list
+  in
+
+  of_filter_criteria_lll
+    filter_criteria_list_list_list
