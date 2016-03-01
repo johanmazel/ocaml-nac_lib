@@ -45,7 +45,5 @@ Library nac_lib
 
                  comparelib,
                  comparelib.syntax,
-                 sexplib,
-                 sexplib.syntax,
-                 bin_prot,
-                 bin_prot.syntax
+                 pa_sexp_conv,
+                 pa_bin_prot
