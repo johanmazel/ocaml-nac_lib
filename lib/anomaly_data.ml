@@ -3,6 +3,7 @@ open Printf
     
 open Admd_instantiations_for_classification
 
+(* TODO: rename to anomaly_classification_data *)
 type t =
   {
     (* date : Core.Date.t; *)
@@ -22,8 +23,10 @@ type t =
 
     slice_list :  Admd.Slice.t list;
 
-    start_time : int;
-    end_time : int;
+    start_sec : int;
+    start_usec : int;
+    stop_sec : int;
+    stop_usec : int;
   }
 
 let new_t
@@ -45,8 +48,10 @@ let new_t
 
     slice_list
 
-    start_time
-    end_time
+    start_sec
+    start_usec
+    stop_sec
+    stop_usec
   =
   {
     (* date; *)
@@ -66,8 +71,10 @@ let new_t
 
     slice_list;
 
-    start_time;
-    end_time;
+    start_sec;
+    start_usec;
+    stop_sec;
+    stop_usec;
   }
 
 let to_xml_anomaly_simple_description
@@ -100,8 +107,10 @@ let to_xml_anomaly_simple_description
 
       t.slice_list
 
-      t.start_time
-      t.end_time
+      t.start_sec
+      t.start_usec
+      t.stop_sec
+      t.stop_usec
   in
 
   anomaly
@@ -115,6 +124,8 @@ let to_xml_anomaly_full_description
     ^ ","
     ^ (Anomaly_signature.to_short_name t.anomaly_signature)
   in
+
+  
 
   let description =
     Xml_classification_description.new_t
@@ -141,13 +152,15 @@ let to_xml_anomaly_full_description
 
       t.slice_list
 
-      t.start_time
-      t.end_time
+      t.start_sec
+      t.start_usec
+      t.stop_sec
+      t.stop_usec
   in
 
   anomaly
     
-
+(* TODO: remove indice *)
 let to_binary_anomaly
     indice
     t
@@ -160,7 +173,7 @@ let to_binary_anomaly
       t.base_value
       t.anomaly_signature
   in
-
+  
   let mawilab_description_for_binary_classification =
     Binary_classification_description.new_t
       t.anomaly_metric
@@ -184,8 +197,10 @@ let to_binary_anomaly
 
       t.slice_list
 
-      t.start_time
-      t.end_time
+      t.start_sec
+      t.start_usec
+      t.stop_sec
+      t.stop_usec
   in
 
   anomaly

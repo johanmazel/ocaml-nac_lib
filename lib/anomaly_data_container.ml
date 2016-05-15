@@ -26,6 +26,7 @@ let debug fmt =
     )
     fmt
 
+(* TODO: rename to anomaly_classification_data *)
 type t =
   {
     basename_wo_extension : string;
@@ -307,6 +308,7 @@ let export_xml
 let export_binary
     t
   =
+  (* TODO: do not use mapi *)
   let anomaly_l =
     L.mapi
       Anomaly_data.to_binary_anomaly
