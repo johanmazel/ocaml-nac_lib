@@ -25,4 +25,8 @@ depends: [
   "ocaml-jl"
   "ocaml-netralys"
   "ocaml-nac_taxonomy"
+
+  "ppx_compare"
+  "ppx_sexp_conv"
+  "ppx_bin_prot"
 ]

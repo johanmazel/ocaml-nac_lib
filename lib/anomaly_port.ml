@@ -14,7 +14,7 @@ type t =
     src_port_distribution_compact : Int_distribution.C_compact.t;
     dst_port_distribution_compact : Int_distribution.C_compact.t;
   }
-with compare, sexp, bin_io
+[@@deriving compare, sexp, bin_io]
 
 let new_t
     src_port_distribution_compact

@@ -36,7 +36,7 @@ module Make (Container : Container) = struct
     {
       container : Container.t;
     }
-  with compare, bin_io
+  [@@deriving compare, bin_io]
 
   let new_t
       container

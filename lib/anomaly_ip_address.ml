@@ -17,7 +17,7 @@ type t =
     src_ip_address_container : Ip_address_container_compact.t;
     dst_ip_address_container : Ip_address_container_compact.t;
   }
-with compare, sexp, bin_io
+[@@deriving compare, sexp, bin_io]
 
 let new_t
     src_ip_address_container

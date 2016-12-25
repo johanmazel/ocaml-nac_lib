@@ -12,7 +12,7 @@ type t =
     anomaly_ip_address : Anomaly_ip_address.t;
     anomaly_port : Anomaly_port.t;
   }
-with compare, sexp, bin_io
+[@@deriving compare, sexp, bin_io]
 
 let new_t
     anomaly_metric

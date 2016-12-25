@@ -12,7 +12,7 @@ type t =
 
     anomaly_signature : Anomaly_signature.t;
   }
-with compare, sexp, bin_io
+[@@deriving compare, sexp, bin_io]
 
 let new_t
     data

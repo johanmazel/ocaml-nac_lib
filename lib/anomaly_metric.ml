@@ -10,7 +10,7 @@ type t =
     packet : float;
     byte : float;
   }
-with compare, sexp, bin_io
+[@@deriving compare, sexp, bin_io]
 
 let new_t
     flow

@@ -7,7 +7,7 @@ type t =
 | Anomalous
 | Suspicious
 | Notice
-with compare, sexp, bin_io
+[@@deriving compare, sexp, bin_io]
 
 let bin_size_t_ = bin_size_t
 let bin_write_t_ = bin_write_t

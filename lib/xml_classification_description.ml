@@ -18,7 +18,7 @@ type t =
     network_traffic_attributes : Network_traffic_attributes.t;
     network_traffic_values : Network_traffic_values.t;
   }
-with compare, sexp, bin_io
+[@@deriving compare, sexp, bin_io]
 
 let new_t
     initial_description_string
